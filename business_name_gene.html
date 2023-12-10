@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatic business generator</title>
+</head>
+<body>
+    <script>
+        let rand=Math.random()
+        let first,second,third;
+        if (rand<0.33){
+            first="crazy"
+        }
+        else if(rand<0.66 && rand>=0.33)
+            {
+                first="Amazing"
+            }
+        else{
+            first="Fire"
+        }
+        rand=Math.random()
+        if (rand<0.33){
+            second="engine"
+        }
+        else if(rand<0.66 && rand>=0.33)
+            {
+                second="foods"
+            }
+        else{
+            second="garments"
+        }
+        rand=Math.random()
+        if (rand<0.33){
+            third="Brps"
+        }
+        else if(rand<0.66 && rand>=0.33)
+            {
+                third="Limited"
+            }
+        else{
+            third="Hub"
+        }
+        console.log(`${first} ${second} ${third}`)
+
+    </script>
+</body>
+</html>

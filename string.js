@@ -27,5 +27,6 @@ console.log(b.concat(a))
 
 
 // for remove whitespaces
-let c="    hello   rushi   "  //hello   rushi
+let c="hello   rushi   "  //hello   rushi
 console.log(c.trim())
+console.log(c.startsWith("hell"))
