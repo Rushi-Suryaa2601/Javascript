@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 50px;
+            width: 50px;
+            margin: 20px;
+            padding: 20px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class=" box test ">Bhupendra Jogi 1</div>
+        <div class="box">Bhupendra Jogi 2</div>
+        <div  class="box">Bhupendra Jogi 3</div>
+        <div class="box">Bhupendra Jogi 4</div>
+        <div class="box">Bhupendra Jogi 4.5</div>
+        <div id="3" class="box">Bhupendra Jogi 5</div>
+    </div>
+
+    <script>
+        let jogi=document.getElementsByClassName("box")
+        console.log(jogi)
+
+        jogi[2].style.backgroundColor="red"
+
+        document.getElementById("3").style.backgroundColor="blue"
+        // document.getElementsByClassName("box").style.backgroundColor="red"
+        document.querySelector(".test").style.backgroundColor="red" // It selects only first
+
+        document.querySelectorAll(".box").forEach(e=>{
+            e.style.backgroundColor="blue"
+        })
+
+   
+        // e=document.getElementsByTagName("div")
+        // e[4].matches("box")
+        // e[4].closest('html')
+        // .contains
+      
+    </script>
+</body>
+</html>
