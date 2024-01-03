@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container red bg-red">
+        <div class="box">Hello I am box</div>
+        <div class="box2" style="color: red;">Hello I am box2</div>
+    </div>
+
+    <script>
+        console.log(document.querySelector(".box").innerHTML)
+        console.log(document.querySelector(".box").outerHTML)
+        console.log(document.querySelector(".container").innerHTML)
+        console.log(document.querySelector(".container").innerText)
+        console.log(document.querySelector(".box").innerText)
+        console.log(document.querySelector(".container").tagName)
+        console.log(document.querySelector(".container").nodeName)
+        console.log(document.querySelector(".container").textContent)
+        // console.log(document.querySelector(".box2").hidden=true)
+        console.log(document.querySelector(".box2").innerHTML="Hey i am python")
+        console.log(document.querySelector(".box2").hasAttribute("style"))
+        console.log(document.querySelector(".box2").getAttribute("style"))
+        console.log(document.querySelector(".box2").setAttribute("style","color:blue;"))
+        console.log(document.querySelector(".box2").attributes)
+        console.log(document.querySelector(".box2").removeAttribute("style"))
+
+        // document.designMode="on"   if you run this command you are ready to edit any website.
+
+
+        // Inserting
+        let div=document.createElement("div");
+        div.innerHTML="I have been inserted <b> By developer </b>"
+        div.setAttribute('class','created')
+        // document.querySelector(".container").append(div)
+        document.querySelector(".container").before(div)
+        // document.querySelector(".container").prepend(div)
+        // document.querySelector(".container").replaceWith(div)
+
+
+        let cont=document.querySelector(".container")
+        cont.insertAdjacentHTML("beforebegin","<b> Hello RAM </P>")
+        cont.insertAdjacentHTML("afterbegin","<b> Hello RAM </P>")
+        cont.insertAdjacentHTML("afterend","<b> Hello RAM </P>")
+        cont.insertAdjacentHTML("beforeend","<b> Hello RAM </P>")
+
+
+        document.querySelector(".container").classList.add("hello")
+        document.querySelector(".container").classList.remove("hello")
+        document.querySelector(".container").classList.toggle("hello")
+        //toggle is used to  " class Hai to jayegi aur nahi hai to lagegi"
+        </script>
+</body>
+</html>
