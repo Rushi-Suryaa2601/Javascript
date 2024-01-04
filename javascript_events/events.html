@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">I am Javascript</div>
+        <button id="btn">Click me</button>
+    </div>
+    <script>
+        let button=document.getElementById("btn")
+
+        // button.addEventListener("click", ()=>{
+        //     // alert("I was clicked")
+        //     document.querySelector(".box").innerHTML="<b> Happy !!! Enjoy your click</b>"
+        // })
+
+        button.addEventListener("contextmenu", ()=>{
+            alert("I was clicked")
+            // document.querySelector(".box").innerHTML="<b> Happy !!! Enjoy your click</b>"
+        })
+
+        button.addEventListener("keydown", ()=>{
+            alert("I was clicked")
+            // document.querySelector(".box").innerHTML="<b> Happy !!! Enjoy your click</b>"
+        })
+    </script>
+</body>
+</html>
+
+<!-- list of all mouse events -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/API/Element#mouse_events -->
