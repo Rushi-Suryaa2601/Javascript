@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const obj=new Promise((resolve,reject)=>{
+            let req=true
+            if(req==true){
+                resolve("Request success")
+
+            }
+            else{
+                reject("Request rejected")
+            }
+        }).then(
+            (value) => { console.log(value)},
+            (error) => { console.log(error)},
+        )
+        
+        //Method Chaining
+        const obj2=new Promise((resolve,reject)=>{
+            let num=10
+            resolve(num)
+        }).then(
+            (value) => { console.log(value)
+            return value+10 }
+        ).then(
+            (value) => { console.log(value) 
+                return value*100
+            }
+            
+        ).then(
+            (value) => { console.log(value) }
+        ).then(
+            () => { throw new Error("Error found") }
+         ).catch(
+             (error) => { console.log(error) }
+         )
+
+
+
+
+
+        // catch method 
+        const obj3=new Promise((resolve,reject)=>{
+            let req=false
+            if(req==true){
+                resolve("Request success")
+
+            }
+            else{
+                reject("Request rejected")
+            }
+        }).then(
+            (value) => { console.log(value)}
+        ).catch(
+            (error) => { console.log(error) }
+        )
+
+
+        // Finally method
+        const obj4=new Promise((resolve,reject)=>{
+            let req=false
+            if(req==true){
+                resolve("Request success")
+
+            }
+            else{
+                reject("Request rejected")
+            }
+        }).then(
+            (value) => { console.log(value)}
+        ).catch(
+            (error) => { console.log(error) }
+        ).finally(
+            () => { console.log("Cleaned file succesfully") }
+        )
+
+
+        // Async and Await
+        function auto(){
+            return new Promise((resolve) => { 
+                setTimeout(() => {
+                    resolve('Happy New Year')
+                }, 2000);
+             })
+        }
+
+        async function asynccall(){
+            console.log("Calling...")
+            const result=await auto()
+            console.log(result)
+        }
+
+        asynccall()
+    </script>
+</body>
+</html>
