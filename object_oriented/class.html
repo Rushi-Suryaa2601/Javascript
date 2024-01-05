@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class  Animal{
+            constructor(name){
+                this.name=name
+                console.log("Object is created...")
+            }
+            eats(){
+                console.log("eating...")
+            }
+            jumps(){
+                console.log("jumping...")
+            }
+        }
+
+        class lion extends Animal{
+            constructor(name){
+                super(name)
+                console.log("lion object is created")
+            }
+            eats(){
+                super.eats()
+                console.log(" lion is eating...")
+            }
+        }
+
+        let a=new Animal("bunny");
+        console.log(a)
+
+        let b=new lion("Mufasa")
+        console.log(b)
+        console.log(a instanceof lion)
+        console.log(b instanceof lion)
+
+
+       // Getter and Setter
+
+        class User{
+            constructor(name){
+                this.name=name
+            }
+
+            get name(){
+                return this._name
+
+            }
+
+            set name(value){
+                if(value.length<4){
+                    alert("Name is too short")
+                    return;
+                }
+                this._name=value
+            }
+        }
+
+        let user=new User("Mufasa")
+        alert(user.name)
+        user=new User("") //Name is too short
+        // alert(user.name)  undefined
+    </script>
+</body>
+</html>
