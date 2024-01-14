@@ -1,0 +1,1 @@
+fs.appendFile("rushi2.txt","i am so happy.",(e,d) => { console.log(d) })
