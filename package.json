@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "This is spotify clone",
   "main": "array.js",
-  "type":"module",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,6 +14,10 @@
   "author": "rushi",
   "license": "ISC",
   "dependencies": {
+    "install": "^0.13.0",
     "slugify": "^1.6.6"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
   }
 }
